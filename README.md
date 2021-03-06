@@ -28,3 +28,11 @@ ternary operator(삼항 연산자) or mini if
 
 local storage
  - 작은 정보를 유저 컴퓨터(브라우져)에 저장하는 방법
+ - 자바스크립트의 data를 저장할 수는 없다. string만 저장 가능
+ - object를 string으로 만들기 위한 트릭으로 JSON.stringify() 사용
+ - string을 object로 변환 JSON.parse()
+
+
+
+JSON(JavaScript Object Notation)
+ - 데이터를 전달할 때, JS가 그걸 다룰 수 있도록 object로 변환시켜줌
