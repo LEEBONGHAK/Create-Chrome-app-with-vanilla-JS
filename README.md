@@ -1,6 +1,7 @@
 # Create-Chrome-app-with-vanilla-JS
 
-Nomadcoder의 '바닐라 JS로 크롬 앱 만들기' 코스를 수강한 결과
+Nomadcoder의 '바닐라 JS로 크롬 앱 만들기' 코스를 수강한 결과이며,
+이 코스는 크롬 앱 중 'momentum'의 기능을 clone하는 것이다.
 
 url : https://nomadcoders.co/javascript-for-beginners
 
