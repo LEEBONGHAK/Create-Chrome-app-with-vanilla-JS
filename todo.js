@@ -3,7 +3,27 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = 'toDos';
-const toDos = [];
+let toDos = [];
+
+
+// 버튼을 눌으면 해당 li와 저장된 local storage 데이터를 제거하는 함수
+function deleteToDo(event) {
+    // .target : 'event'에 'target'은 선택한 것이 어떤 HTML을 갖는지 알려줌
+    const btn = event.target;
+    // .parentNode : 부모 tag를 불러옴
+    const li = btn.parentNode;
+    // .removeChild() : 해당 자식 tag들을 제거
+    toDoList.removeChild(li);
+    // .filter() : .forEach와 같이 각각의 item들이 실행되게 만드면서 array를 만듬
+    // li에 없는 id인 toDos를 체크 -> 지우고 싶은 li을 제외한 array 생성
+    const cleanToDos = toDos.filter(function (toDo) {
+        // li.id의 경우 string -> parseInt()로 숫자로 변환 
+        return toDo.id !== parseInt(li.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
+
 
 
 /* 
@@ -26,6 +46,7 @@ function paintToDo(text) {
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     delBtn.innerText = "❌";
+    delBtn.addEventListener('click', deleteToDo);
     span.innerText = text;
     // .appendChild() - ()안의 것을 child element로 넣는 것
     li.appendChild(delBtn);
