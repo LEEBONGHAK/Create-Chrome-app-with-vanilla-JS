@@ -4,6 +4,8 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 const TODOS_LS = 'toDos';
 let toDos = [];
+// id가 toDos의 개수가 아닌 새로운 변수로 지정되게 만듬
+let idNumbers = 1;
 
 
 // 버튼을 눌으면 해당 li와 저장된 local storage 데이터를 제거하는 함수
@@ -20,6 +22,10 @@ function deleteToDo(event) {
         // li.id의 경우 string -> parseInt()로 숫자로 변환 
         return toDo.id !== parseInt(li.id);
     });
+    // 새롭게 생성된 array에 요소가 없다면 idNumbers 초기화
+    if (cleanToDos.length === 0) {
+        idNumbers = 1;
+    }
     toDos = cleanToDos;
     saveToDos();
 }
@@ -44,7 +50,8 @@ function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
-    const newId = toDos.length + 1;
+    const newId = idNumbers;
+    idNumbers += 1;
     delBtn.innerText = "❌";
     delBtn.addEventListener('click', deleteToDo);
     span.innerText = text;
