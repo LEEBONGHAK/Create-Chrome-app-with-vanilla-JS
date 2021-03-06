@@ -21,3 +21,9 @@ setInterval(function, interval time(ms))
 ternary operator(삼항 연산자) or mini if
  - 하나의 문자열로 적을 수 있는 if문
  - 조건 ? 참 : 거짓
+
+
+
+
+local storage
+ - 작은 정보를 유저 컴퓨터(브라우져)에 저장하는 방법
