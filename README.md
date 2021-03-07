@@ -36,3 +36,10 @@ local storage
 
 JSON(JavaScript Object Notation)
  - 데이터를 전달할 때, JS가 그걸 다룰 수 있도록 object로 변환시켜줌
+
+
+
+
+API(Application Programming Interface)
+ - 다른 서버로부터 손쉽게 데이터를 가져올 수 있는 수단
+ - 특정 웹사이트로부터 데이터를 얻거나 컴퓨터(Machines)끼리 소통하기 위해 고안된 것
