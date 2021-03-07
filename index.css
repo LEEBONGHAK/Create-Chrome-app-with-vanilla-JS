@@ -3,12 +3,28 @@ body {
   color: white;
 }
 
+header {
+  text-align: end;
+  padding-right: 14px;
+  margin-bottom: 100px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .btn {
   cursor: pointer;
 }
 
 .clicked {
   color: #7f8c8d;
+}
+
+.greetings {
+  font-size: 25px;
 }
 
 .form,
@@ -37,4 +53,47 @@ body {
   height: 100%;
   z-index: -1;
   animation: fadeIn 1s ease-in-out;
+}
+
+.js-clock {
+  font-size: 50px;
+}
+
+.js-toDoForm input,
+.js-form input {
+  height: 25px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid white;
+  font-size: 25px;
+  color: white;
+}
+
+.js-toDoForm input::placeholder,
+.js-form input::placeholder {
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+
+.js-toDoForm input {
+  height: 15px;
+}
+
+.js-toDoForm input,
+.js-toDoForm input::placeholder {
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.name {
+  margin-bottom: 20px;
+}
+
+.greetings {
+  margin-top: -10px;
+  margin-bottom: 0px;
 }

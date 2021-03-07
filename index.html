@@ -6,20 +6,25 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <div class="js-clock">
-            <h1>00:00</h1>
-        </div>
-        <form class="js-form form">
-            <input type="text" placeholder="What is your name?" />
-        </form>
-        <h4 class="js-greetings greetings"></h4>
-        <form class="js-toDoForm">
-            <input type="text" placeholder="Write a to do">
-        </form>
-        <ul class="js-toDoList">
-            
-        </ul>
-        <span class="js-weather"></span>
+        <header>
+            <span class="js-weather"></span>
+        </header>
+        <main>
+            <div class="js-clock">
+                <h1>00:00</h1>
+            </div>
+            <div class="name">
+                <form class="js-form form">
+                    <input type="text" placeholder="What is your name?" size="13" />
+                </form>
+                <h4 class="js-greetings greetings"></h4>
+            </div>
+            <form class="js-toDoForm">
+                <input type="text" placeholder="Write a to do" size="10" />
+            </form>
+            <ul class="js-toDoList">
+            </ul>
+        </main>
         <script src="clock.js"></script>
         <script src="greeting.js"></script>
         <script src="todo.js"></script>
