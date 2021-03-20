@@ -81,7 +81,7 @@ function handleSubmit(event) {
 // local strage에 있는 데이터를 가져와 표기 해주는 함수
 function loadToDos()  {
     const loadedToDos = localStorage.getItem(TODOS_LS);
-    if (loadedtoDos !== null) {
+    if (loadedToDos !== null) {
         const parsedToDos = JSON.parse(loadedToDos);
         // .forEach() : array에 담겨있는 것들 각각에 한번씩 함수를 실행시킴
         parsedToDos.forEach(function (toDo) {
