@@ -2,12 +2,6 @@ const body = document.querySelector('body');
 
 const IMG_NUMBER = 7;
 
-
-function handleImgLoad(image) {
-    
-}
-
-
 function paintImage(imgNumber) {
     const image = new Image();
     image.src = `images/${imgNumber}.jpg`;
